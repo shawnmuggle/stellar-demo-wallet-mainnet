@@ -1,0 +1,7 @@
+{
+  "buildCommand": "yarn build",
+  "outputDirectory": "packages/demo-wallet-client/build",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
