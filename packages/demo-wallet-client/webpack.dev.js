@@ -3,8 +3,11 @@ const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
-  mode: "production",
+  mode: "development",
   devtool: "cheap-module-source-map",
+  output: {
+    publicPath: "/",
+  },
   devServer: {
     static: path.join(__dirname, "build"),
     historyApiFallback: true,

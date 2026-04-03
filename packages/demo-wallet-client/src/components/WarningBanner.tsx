@@ -9,14 +9,16 @@ export const WarningBanner = () => {
     return null;
   }
 
-  const message =
-    network === Networks.PUBLIC
-      ? "You’ve connected a real account to this demo. You are not on the test server. Any actions you take here will affect actual assets."
-      : `You’ve connected to ${url}`;
-
   return (
-    <StatusBar
-      variant={StatusBar.variant.warning}
-    >{`WARNING: ${message}`}</StatusBar>
+    <>
+      <StatusBar variant={StatusBar.variant.error}>
+        MAINNET — Test with small amounts only. All actions affect real assets.
+      </StatusBar>
+      {network !== Networks.PUBLIC && (
+        <StatusBar variant={StatusBar.variant.warning}>
+          {`WARNING: You’ve connected to ${url}`}
+        </StatusBar>
+      )}
+    </>
   );
 };
