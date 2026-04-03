@@ -1,4 +1,5 @@
 {
+  "framework": null,
   "buildCommand": "yarn build",
   "outputDirectory": "packages/demo-wallet-client/build",
   "rewrites": [
